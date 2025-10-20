@@ -79,6 +79,34 @@
   .method-item.theme-green .timeline-dot,
   .method-item.theme-sand .timeline-dot { border-color: #DB4F3E; background: #ffffff; }
 
+  /* Value cards: hover & motion effects */
+  .value-card-new { transform-style: preserve-3d; backface-visibility: hidden; transition: transform .25s ease, box-shadow .3s ease; }
+  .value-card-new:hover { box-shadow: 0 30px 60px rgba(0,0,0,.15); }
+  .value-card-new::before {
+    content:""; position:absolute; inset:-2px; border-radius: 20px;
+    background: linear-gradient(120deg, rgba(255,255,255,0) 35%, rgba(255,255,255,.45) 50%, rgba(255,255,255,0) 65%);
+    transform: translateX(-120%);
+    transition: transform .7s ease;
+    pointer-events:none; mix-blend-mode: screen;
+  }
+  .value-card-new:hover::before { transform: translateX(140%); }
+
+  .value-card-new .value-content h5,
+  .value-card-new .value-content p { transition: transform .25s ease, color .25s ease; }
+  .value-card-new:hover .value-content h5 { transform: translateY(-2px); color: #1f2937; }
+  .value-card-new:hover .value-content p { transform: translateY(-1px); color: #4b5563; }
+
+  .value-icon-new { position: relative; }
+  .value-icon-new::after { content:""; position:absolute; inset:-4px; border-radius:50%; border:2px solid rgba(0,0,0,.12); animation: pulseGlow 3s ease-in-out infinite; }
+  @keyframes pulseGlow { 0% { transform: scale(1); opacity:.7; } 100% { transform: scale(1.25); opacity:0; } }
+
+  /* Glow color per tema */
+  .value-glow.gradient-green { background: radial-gradient(120px 120px at 50% 50%, rgba(35,204,136,.28), rgba(142,207,53,0)); }
+  .value-glow.gradient-orange { background: radial-gradient(120px 120px at 50% 50%, rgba(255,79,88,.28), rgba(255,180,0,0)); }
+  .value-glow.gradient-blue { background: radial-gradient(120px 120px at 50% 50%, rgba(1,203,173,.28), rgba(71,161,242,0)); }
+  .value-glow.gradient-pink { background: radial-gradient(120px 120px at 50% 50%, rgba(232,90,202,.28), rgba(252,78,101,0)); }
+  .value-card-new:hover .value-glow { opacity: .18; }
+
   @media (max-width: 576px) {
     .method-area-new .method-timeline { grid-template-columns: 1fr; }
   }
@@ -541,6 +569,33 @@
     <script src="assets/js/backToTop.js"></script>
     <script src="assets/js/imagesloaded.pkgd.min.js"></script>
     <script src="assets/js/jquery.magnific-popup.min.js"></script>
+
+    <!-- Interaksi tilt untuk kartu Value -->
+    <script>
+      (function(){
+        document.addEventListener('DOMContentLoaded', function(){
+          var cards = document.querySelectorAll('.value-card-new');
+          if (!cards.length) return;
+          var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          cards.forEach(function(card){
+            var rect = null; var hovering = false;
+            function reset(){ card.style.transform = ''; }
+            card.addEventListener('mouseenter', function(){ hovering = true; rect = card.getBoundingClientRect(); });
+            card.addEventListener('mousemove', function(e){
+              if (!hovering || reduceMotion) return;
+              rect = rect || card.getBoundingClientRect();
+              var x = (e.clientX - rect.left) / rect.width;
+              var y = (e.clientY - rect.top) / rect.height;
+              var rx = (0.5 - y) * 10;  // rotateX max ~10deg
+              var ry = (x - 0.5) * 10;  // rotateY max ~10deg
+              card.style.transform = 'translateY(-8px) rotateX(' + rx + 'deg) rotateY(' + ry + 'deg)';
+            });
+            card.addEventListener('mouseleave', function(){ hovering = false; reset(); });
+          });
+        });
+      })();
+    </script>
+
     <script src="assets/js/main.js"></script>
 </body>
 
