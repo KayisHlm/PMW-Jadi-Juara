@@ -124,6 +124,15 @@
 /* Offset notch to bridge previous/next section boundaries */
 .purpose-section.section-notch::before{ top: -20px; }
 .purpose-section.section-notch::after{ bottom: -20px; }
+/* Ensure proper positioning, layering, and crisp tiling */
+.purpose-section.section-notch::before,
+.purpose-section.section-notch::after{
+  left: 0; right: 0;
+  background-repeat: repeat-x;
+  background-size: auto 20px;
+  pointer-events: none;
+}
+.purpose-section.section-notch::after{ z-index: 24; }
 .purpose-grid{ display:grid; grid-template-columns: repeat(2,1fr); gap:24px; }
 .purpose-card{
   position:relative;
@@ -272,7 +281,7 @@
                     <div class="row align-items-center">
                         <div class="col-xl-2 col-lg-2 col-6">
                             <div class="logo">
-                                <a href="index.html"><h1>Logo</h1></a>
+                                <a href="Home.html"><h1>Logo</h1></a>
                             </div>
                         </div>
                         <div class="col-xl-7 col-lg-7 d-none d-lg-block">
@@ -349,7 +358,7 @@
                             <h2>About our Kinter</h2>
                             <div class="breadcrumb-list text-left">
                                 <ul>
-                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="Home.html">Home</a></li>
                                     <li>Jadi Juara</li>
                                 </ul>
                             </div>
