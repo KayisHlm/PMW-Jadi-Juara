@@ -26,6 +26,63 @@
     <link rel="stylesheet" href="assets/css/common.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+<style>
+  /* Footer gradient: white → cream */
+  .footer-area { background: linear-gradient(to bottom, #ffffff 0%, #eadfcd 100%); }
+  .footer-area .footer-top, .footer-area .footer-bottom { background: transparent; }
+  /* Metode Belajar: coral background */
+  .method-area-new.cheerful { background: #dc4f3c; }
+  .method-area-new.cheerful .section-title .title,
+  .method-area-new.cheerful .section-title p { color: #fff; }
+
+  /* Metode Belajar: layout pusat dengan grid & konten terpusat */
+  .method-area-new .method-timeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    align-items: start;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .method-area-new .timeline-line,
+  .method-area-new .timeline-dot { display: none !important; }
+  .method-area-new .method-item { display: block; position: static !important; }
+  .method-area-new .method-card-new { width: 100%; text-align: center; margin: 0 !important; }
+  .method-area-new .method-card-new.left,
+  .method-area-new .method-card-new.right { margin: 0 !important; }
+  .method-area-new .method-icon-new { margin: 0 auto 16px; }
+  .method-area-new .method-benefits { justify-content: center; }
+
+  /* Seragamkan palet coral untuk semua card */
+  .method-item.theme-blue .method-icon-new,
+  .method-item.theme-orange .method-icon-new,
+  .method-item.theme-green .method-icon-new,
+  .method-item.theme-sand .method-icon-new { background: #fee2e2; border-color: #fecaca; }
+
+  .method-item.theme-blue .method-icon-new i,
+  .method-item.theme-orange .method-icon-new i,
+  .method-item.theme-green .method-icon-new i,
+  .method-item.theme-sand .method-icon-new i { color: #DB4F3E; }
+
+  .method-item.theme-blue .method-card-new,
+  .method-item.theme-orange .method-card-new,
+  .method-item.theme-green .method-card-new,
+  .method-item.theme-sand .method-card-new { border-color: #f4b4a8; box-shadow: 0 6px 16px rgba(219, 79, 62, 0.10); }
+
+  .method-item.theme-blue .benefit-tag,
+  .method-item.theme-orange .benefit-tag,
+  .method-item.theme-green .benefit-tag,
+  .method-item.theme-sand .benefit-tag { background: #fee2e2; border-color: #fecaca; color: #7f1d1d; }
+
+  .method-item.theme-blue .timeline-dot,
+  .method-item.theme-orange .timeline-dot,
+  .method-item.theme-green .timeline-dot,
+  .method-item.theme-sand .timeline-dot { border-color: #DB4F3E; background: #ffffff; }
+
+  @media (max-width: 576px) {
+    .method-area-new .method-timeline { grid-template-columns: 1fr; }
+  }
+</style>
 </head>
 
 <body>
@@ -268,7 +325,6 @@
         </section>
         <!-- Value section end -->
 
-        <!-- Metode Belajar section start -->
         <section class="method-area-new section-notch cheerful pt-120 pb-120 position-relative will-animate" data-animate="fadeInUp" data-animate-delay="0.12s">
             <div class="container">
                 <div class="row justify-content-center">
@@ -441,11 +497,11 @@
                                 <div class="footer-widget mb-40">
                                     <h3>Kontak Person</h3>
                                     <ul class="contact-list">
-                                        <li><i class="fas fa-user"></i> Admin Kinter</li>
+                                        <li><i class="fas fa-user"></i> Admin Jadi Juara</li>
                                         <li><i class="fas fa-phone"></i> <a href="tel:+6281234567890">+62 812-3456-7890</a></li>
-                                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@kinter.id">info@kinter.id</a></li>
+                                        <li><i class="fas fa-envelope"></i> <a href="mailto:jadijuara@gmail.com">jadijuara@gmail.com</a></li>
                                         <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/6281234567890" target="_blank" rel="noopener">WhatsApp: +62 812-3456-7890</a></li>
-                                        <li><i class="fas fa-map-marker-alt"></i> Jakarta, Indonesia</li>
+                                        <li><i class="fas fa-map-marker-alt"></i> Tembalang, Indonesia</li>
                                     </ul>
                                 </div>
                             </div>

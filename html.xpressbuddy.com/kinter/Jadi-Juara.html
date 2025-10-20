@@ -174,7 +174,7 @@
   padding: 110px 0;
   background:
     radial-gradient(900px 500px at 120% -20%, rgba(230,190,70,.12), transparent 52%),
-    linear-gradient(180deg, var(--clr-sand), var(--clr-white));
+    linear-gradient(to bottom, var(--clr-white) 0%, var(--clr-sand) 100%);
 }
 .team-grid{ display:grid; grid-template-columns: repeat(5, minmax(150px,1fr)); gap:22px; }
 @media (max-width: 991px){ .team-grid{ grid-template-columns: repeat(3, 1fr);} }
@@ -190,8 +190,11 @@
 /* Section 4 - Address */
 .address-section{
   padding:110px 0;
-  background: linear-gradient(180deg, var(--clr-white), var(--clr-sand));
+  background: linear-gradient(145deg, var(--clr-green), var(--clr-deep-green));
+  color: #fff;
 }
+.address-section .section-title .title,
+.address-section .section-title p { color: #fff; }
 .address-wrap{ display:grid; grid-template-columns: 1.1fr .9fr; gap:28px; align-items:center; }
 @media (max-width: 991px){ .address-wrap{ grid-template-columns: 1fr; } }
 
@@ -215,7 +218,11 @@
   background:#fff; border:1px solid rgba(15,43,10,.12);
   border-radius:22px; padding:26px;
   box-shadow: 0 15px 30px rgba(15,43,10,.08);
+  color:#1f2a1f;
 }
+.address-card h5,
+.address-card strong,
+.address-card .address-item div { color:#1f2a1f; }
 .address-list{ display:grid; gap:12px; margin-top:6px; }
 .address-item{ display:flex; align-items:flex-start; gap:12px; }
 .address-item .icon{
@@ -224,10 +231,10 @@
   box-shadow:0 10px 18px rgba(15,43,10,.18);
 }
 .address-item .icon.coral{ background: var(--clr-coral); }
-.address-item .icon.gold{ background: var(--clr-gold); color:#1c1c1c; }
+.address-item .icon.gold{ background: var(--clr-gold); color:#fff; }
 .address-item .icon.green{ background: var(--clr-green); }
 
-.thm-btn{ background: linear-gradient(145deg, var(--clr-green), var(--clr-deep-green)); border-color: transparent; }
+.thm-btn{ background-image: linear-gradient(145deg, rgb(35,204,136) 0%, rgb(142,207,53) 100%); border-color: transparent; }
 .thm-btn:hover{ filter: brightness(1.05); }
       .map-embed iframe{ width:100%; height:360px; border:0; }
       .address-card .cta{ margin-top:20px; }
@@ -269,7 +276,12 @@
           /* Alignment: Tujuan content center */
           .purpose-card.variant-gold .desc{ text-align:center; }
          </style>
-  </head>
+  <style>
+  /* Footer gradient: white → cream */
+  .footer-area { background: linear-gradient(to bottom, #ffffff 0%, #eadfcd 100%); }
+  .footer-area .footer-top, .footer-area .footer-bottom { background: transparent; }
+</style>
+</head>
 
 <body>
 
@@ -416,7 +428,7 @@
         <!-- page title end -->
 
         <!-- Section 1: Sejarah Jadi Juara -->
-        <section class="history-section will-animate" data-animate="fadeInUp" data-animate-delay="0.05s">
+        <section class="history-section section-notch will-animate" data-animate="fadeInUp" data-animate-delay="0.05s">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-10">
@@ -446,7 +458,7 @@
         </section>
 
         <!-- Section 2: Visi Misi Tujuan -->
-        <section class="purpose-section colorful will-animate" data-animate="fadeInUp" data-animate-delay="0.08s">
+        <section class="purpose-section will-animate" data-animate="fadeInUp" data-animate-delay="0.08s">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
@@ -495,7 +507,7 @@
         </section>
 
         <!-- Section 3: Tim Jadi Juara -->
-        <section class="team-section will-animate" data-animate="fadeInUp" data-animate-delay="0.1s">
+        <section class="team-section section-notch will-animate" data-animate="fadeInUp" data-animate-delay="0.1s">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
@@ -531,7 +543,7 @@
         </section>
 
         <!-- Section 4: Alamat -->
-        <section class="address-section will-animate" data-animate="fadeInUp" data-animate-delay="0.12s">
+        <section class="address-section section-notch will-animate" data-animate="fadeInUp" data-animate-delay="0.12s">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
@@ -549,14 +561,14 @@
                         <h5>Hubungi & Kunjungi</h5>
                         <div class="address-list">
                             <div class="address-item">
-                                <div class="icon coral"><i class="far fa-map-marker-alt"></i></div>
+                                <div class="icon coral"><i class="far fa-map-marker-alt" style="color:#fff"></i></div>
                                 <div>
                                     <strong>Alamat</strong>
                                     <div>Jalan Prof Sudarto</div>
                                 </div>
                             </div>
                             <div class="address-item">
-                                <div class="icon green"><i class="far fa-phone"></i></div>
+                                <div class="icon green"><i class="far fa-phone" style="color:#fff"></i></div>
                                 <div>
                                     <strong>Telepon</strong>
                                     <div>+62 812-1234-5678</div>
@@ -570,15 +582,12 @@
                                 </div>
                             </div>
                             <div class="address-item">
-                                <div class="icon green"><i class="far fa-clock"></i></div>
+                                <div class="icon green"><i class="far fa-clock" style="color:#fff"></i></div>
                                 <div>
                                     <strong>Jam Operasional</strong>
                                     <div>Senin–Jumat 09:00–18:00</div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="cta">
-                            <a class="thm-btn" href="https://maps.google.com/?q=Jalan%20Belajar%20No.%207%2C%20Bandung%2C%20Jawa%20Barat" target="_blank" rel="noopener">Arahkan ke Lokasi</a>
                         </div>
                     </div>
                 </div>
@@ -610,11 +619,11 @@
                                 <div class="footer-widget mb-40">
                                     <h3>Kontak Person</h3>
                                     <ul class="contact-list">
-                                        <li><i class="fas fa-user"></i> Admin Kinter</li>
+                                        <li><i class="fas fa-user"></i> Admin Jadi Juara</li>
                                         <li><i class="fas fa-phone"></i> <a href="tel:+6281234567890">+62 812-3456-7890</a></li>
-                                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@kinter.id">info@kinter.id</a></li>
+                                        <li><i class="fas fa-envelope"></i> <a href="mailto:jadijuara@gmail.com">jadijuara@gmail.com</a></li>
                                         <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/6281234567890" target="_blank" rel="noopener">WhatsApp: +62 812-3456-7890</a></li>
-                                        <li><i class="fas fa-map-marker-alt"></i> Jakarta, Indonesia</li>
+                                        <li><i class="fas fa-map-marker-alt"></i> Tembalang, Indonesia</li>
                                     </ul>
                                 </div>
                             </div>
