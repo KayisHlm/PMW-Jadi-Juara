@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="zxx">
+
+
+<!-- Mirrored from html.xpressbuddy.com/kinter/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 15 Oct 2025 10:38:58 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Jadi Juara</title>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+
+    <!-- css include -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/swiper.min.css">
+    <link rel="stylesheet" href="assets/css/meanmenu.css">
+    <link rel="stylesheet" href="assets/css/jquery-ui.css">
+    <link rel="stylesheet" href="assets/css/uikit.min.css">
+    <link rel="stylesheet" href="assets/css/odometer.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <style id="juara-page-styles">
+/* Palet warna halaman sesuai lampiran */
+.juara-page {
+  --clr-coral: #dc4f3c;
+  --clr-orange: #d16039;
+  --clr-gold: #e7bb48;
+  --clr-green: #376f43;
+  --clr-deep-green: #0f2b0a;
+  --clr-sand: #eadfcd;
+  --clr-white: #ffffff;
+}
+
+/* Util */
+.juara-page .text-white { color: var(--clr-white); }
+.juara-page .bg-coral { background: var(--clr-coral); }
+.juara-page .bg-orange { background: var(--clr-orange); }
+.juara-page .bg-gold { background: var(--clr-gold); }
+.juara-page .bg-green { background: var(--clr-green); }
+.juara-page .bg-deep-green { background: var(--clr-deep-green); }
+.juara-page .bg-sand { background: var(--clr-sand); }
+
+.juara-page .section-title .title {
+  font-size: 44px;
+  line-height: 1.2;
+  letter-spacing: .3px;
+  position: relative;
+  display:inline-block;
+}
+.juara-page .section-title .title::after{
+  content:"";
+  position:absolute;
+  left:0; bottom:-10px;
+  width:64px; height:6px;
+  border-radius:6px;
+  background: linear-gradient(90deg, var(--clr-coral), var(--clr-orange), var(--clr-gold));
+}
+
+.will-animate{ opacity:0; transform: translateY(22px); }
+.will-animate.in-view{ opacity:1; transform:none; }
+.will-animate[data-animate='fadeInUp'].in-view{ animation: riseIn .8s cubic-bezier(.2,.9,.2,1) forwards; }
+.will-animate[data-animate='fadeInLeft'].in-view{ animation: riseLeft .8s cubic-bezier(.2,.9,.2,1) forwards; }
+.will-animate[data-animate='fadeInRight'].in-view{ animation: riseRight .8s cubic-bezier(.2,.9,.2,1) forwards; }
+
+@keyframes riseIn { from{ opacity:0; transform: translateY(24px);} to{opacity:1; transform:none;} }
+@keyframes riseLeft { from{ opacity:0; transform: translateX(-24px);} to{opacity:1; transform:none;} }
+@keyframes riseRight { from{ opacity:0; transform: translateX(24px);} to{opacity:1; transform:none;} }
+@keyframes floatY { 0%,100% { transform: translateY(0);} 50% { transform: translateY(-8px);} }
+
+/* Section 1 - History */
+.history-section{
+  position:relative;
+  padding: 110px 0 110px;
+  background:
+    radial-gradient(1200px 600px at -10% -20%, rgba(222,79,61,.07), transparent 60%),
+    linear-gradient(180deg, var(--clr-white), var(--clr-sand));
+}
+.history-wrap{ display:grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items:center; }
+.history-media{
+  position:relative;
+  aspect-ratio: 1 / 1;
+  max-width: 420px;
+  justify-self: center;
+}
+.history-media img{
+  width:100%;
+  height:100%;
+  border-radius:12px;
+  object-fit: cover;
+  box-shadow: 0 30px 50px rgba(15,43,10,.18);
+  animation: floatY 5s ease-in-out infinite;
+}
+.history-media .blob{
+  position:absolute;
+  inset:auto;
+  width:180px; height:180px;
+  border-radius:12px;
+  background: linear-gradient(145deg, var(--clr-green), var(--clr-deep-green));
+  filter: blur(20px);
+  opacity:.25;
+}
+.history-media .blob.blob-1{ left:-40px; top:-40px; }
+.history-media .blob.blob-2{ right:-35px; bottom:-35px; }
+
+.history-content .lead{
+  font-size:18px;
+  line-height:1.8;
+  color:#333;
+}
+.history-badges{ margin-top:24px; display:flex; gap:14px; flex-wrap:wrap; }
+.history-badge{
+  background: linear-gradient(145deg, var(--clr-coral), var(--clr-orange));
+  color: var(--clr-white);
+  padding:10px 14px;
+  border-radius:999px;
+  font-weight:600;
+  box-shadow: 0 10px 20px rgba(216,79,60,.22);
+}
+
+/* Section 2 - Purpose (Visi Misi Tujuan) */
+.purpose-section{ padding:110px 0 105px; background: linear-gradient(180deg, var(--clr-white), #fff); }
+/* Offset notch to bridge previous/next section boundaries */
+.purpose-section.section-notch::before{ top: -20px; }
+.purpose-section.section-notch::after{ bottom: -20px; }
+/* Ensure proper positioning, layering, and crisp tiling */
+.purpose-section.section-notch::before,
+.purpose-section.section-notch::after{
+  left: 0; right: 0;
+  background-repeat: repeat-x;
+  background-size: auto 20px;
+  pointer-events: none;
+}
+.purpose-section.section-notch::after{ z-index: 24; }
+.purpose-grid{ display:grid; grid-template-columns: repeat(2,1fr); gap:24px; }
+.purpose-card{
+  position:relative;
+  border-radius:22px;
+  padding:32px;
+  overflow:hidden;
+  background: #fff;
+  border:1px solid rgba(15,43,10,.12);
+  box-shadow: 0 15px 30px rgba(15,43,10,.08);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.purpose-card.big{ grid-column: 1 / -1; justify-self: center; width: min(100%, 820px); }
+.purpose-card:hover{ transform: translateY(-6px); box-shadow: 0 24px 40px rgba(15,43,10,.12); }
+
+.purpose-card .label{
+  display:inline-block; font-weight:700; margin-bottom:8px;
+  padding:8px 12px; line-height:1; border-radius:999px;
+  box-shadow: 0 8px 16px rgba(15,43,10,.10);
+  color:#fff; background: linear-gradient(145deg, var(--clr-green), var(--clr-deep-green));
+}
+.purpose-card .title{ font-size:30px; line-height:1.3; margin-bottom:14px; text-align:center; }
+.purpose-card .desc{ color:#2f2f2f; font-size:17px; line-height:1.8; }
+.purpose-card .accent{
+  position:absolute; inset:auto;
+  right:-16px; top:-16px; width:140px; height:140px; border-radius:50%;
+  filter: blur(18px); opacity:.25;
+}
+.purpose-card.variant-coral .accent{ background: linear-gradient(145deg, var(--clr-coral), var(--clr-orange)); }
+.purpose-card.variant-orange .accent{ background: linear-gradient(145deg, var(--clr-orange), var(--clr-gold)); }
+.purpose-card.variant-gold .accent{ background: linear-gradient(145deg, var(--clr-gold), var(--clr-sand)); }
+
+/* Section 3 - Team */
+.team-section{
+  padding: 110px 0;
+  background:
+    radial-gradient(900px 500px at 120% -20%, rgba(230,190,70,.12), transparent 52%),
+    linear-gradient(to bottom, var(--clr-white) 0%, var(--clr-sand) 100%);
+}
+.team-grid{ display:grid; grid-template-columns: repeat(5, minmax(150px,1fr)); gap:22px; }
+@media (max-width: 991px){ .team-grid{ grid-template-columns: repeat(3, 1fr);} }
+@media (max-width: 575px){ .team-grid{ grid-template-columns: repeat(2, 1fr);} }
+
+.team-card{ position:relative; border-radius:18px; overflow:hidden; background:#fff; box-shadow:0 12px 24px rgba(15,43,10,.10); transition: transform .25s ease, box-shadow .25s ease; }
+.team-card:hover{ transform: translateY(-6px); box-shadow:0 20px 34px rgba(15,43,10,.16); }
+.team-card .avatar{ aspect-ratio: 1 / 1; object-fit: cover; width:100%; }
+.team-card .meta{ padding:12px 14px; }
+.team-card .name{ font-weight:700; color:#1f2a1f; }
+.team-card .role{ font-size:14px; color:#4a5a4a; }
+
+/* Section 4 - Address */
+.address-section{
+  padding:110px 0;
+  background: linear-gradient(145deg, var(--clr-green), var(--clr-deep-green));
+  color: #fff;
+}
+.address-section .section-title .title,
+.address-section .section-title p { color: #fff; }
+.address-wrap{ display:grid; grid-template-columns: 1.1fr .9fr; gap:28px; align-items:center; }
+@media (max-width: 991px){ .address-wrap{ grid-template-columns: 1fr; } }
+
+.map-embed{
+  border-radius:26px; overflow:hidden;
+  min-height: 300px;
+  background:
+    linear-gradient(145deg, var(--clr-green), var(--clr-deep-green)),
+    url('assets/img/shape/sf-bg.png');
+  background-blend-mode: overlay;
+  box-shadow: 0 25px 40px rgba(15,43,10,.16);
+  position:relative;
+}
+.map-embed::after{
+  content:"";
+  position:absolute; inset:12px;
+  border-radius:22px;
+  border: 2px dashed rgba(255,255,255,.25);
+}
+.address-card{
+  background:#fff; border:1px solid rgba(15,43,10,.12);
+  border-radius:22px; padding:26px;
+  box-shadow: 0 15px 30px rgba(15,43,10,.08);
+  color:#1f2a1f;
+}
+.address-card h5,
+.address-card strong,
+.address-card .address-item div { color:#1f2a1f; }
+.address-list{ display:grid; gap:12px; margin-top:6px; }
+.address-item{ display:flex; align-items:flex-start; gap:12px; }
+.address-item .icon{
+  width:36px; height:36px; border-radius:10px; display:grid; place-items:center;
+  color:#fff;
+  box-shadow:0 10px 18px rgba(15,43,10,.18);
+}
+.address-item .icon.coral{ background: var(--clr-coral); }
+.address-item .icon.gold{ background: var(--clr-gold); color:#fff; }
+.address-item .icon.green{ background: var(--clr-green); }
+
+.thm-btn{ background-image: linear-gradient(145deg, rgb(35,204,136) 0%, rgb(142,207,53) 100%); border-color: transparent; }
+.thm-btn:hover{ filter: brightness(1.05); }
+      .map-embed iframe{ width:100%; height:360px; border:0; }
+      .address-card .cta{ margin-top:20px; }
+       /* Purpose Section - colorful background */
+       .purpose-section.colorful{
+         background:
+           radial-gradient(800px 400px at -10% 10%, rgba(220,79,60,.08), transparent 60%),
+           radial-gradient(700px 380px at 110% 0%, rgba(231,187,72,.12), transparent 58%),
+           radial-gradient(600px 320px at 50% 110%, rgba(55,111,67,.10), transparent 60%),
+           linear-gradient(180deg, var(--clr-white), var(--clr-sand));
+       }
+       /* Card head & icon badge */
+       .purpose-card .card-head{ display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; margin-bottom:16px; }
+       .purpose-card .icon-badge{ width:80px; height:80px; border-radius:50%; display:grid; place-items:center; box-shadow:0 8px 18px rgba(0,0,0,.14); font-size:36px; color:#fff; }
+       .purpose-card .title{ font-size:30px; text-align:center; margin-top:8px; }
+       .purpose-card .label{ font-size:16px; padding:10px 16px; line-height:1; border-radius:999px; box-shadow:0 6px 16px rgba(0,0,0,.16); color:#fff; }
+       /* variant shadows remain consistent */
+       .purpose-card.variant-coral .label{ background: linear-gradient(145deg, var(--clr-coral), var(--clr-orange)); }
+       .purpose-card.variant-orange .label{ background: linear-gradient(145deg, var(--clr-orange), var(--clr-gold)); }
+       .purpose-card.variant-gold .label{ background: linear-gradient(145deg, var(--clr-gold), var(--clr-sand)); color:#1c1c1c; }
+       .purpose-card.variant-coral .icon-badge{ background: linear-gradient(145deg, var(--clr-coral), var(--clr-orange)); }
+       .purpose-card.variant-orange .icon-badge{ background: linear-gradient(145deg, var(--clr-orange), var(--clr-gold)); }
+       .purpose-card.variant-gold .icon-badge{ background: linear-gradient(145deg, var(--clr-gold), var(--clr-sand)); color:#1c1c1c; }
+       /* Hover polish */
+       .purpose-card:hover{ transform: translateY(-6px); box-shadow: 0 24px 40px rgba(15,43,10,.12); }
+        /* Typography amplify */
+        .purpose-card.big .title{ font-size:36px; text-align:center; }
+        /* Description list styling */
+        .purpose-card .desc-list{ margin-top:8px; list-style:none; display:grid; gap:8px; text-align:center; justify-items:center; }
+        .purpose-card .desc-list li{ position:relative; padding-left:24px; }
+        .purpose-card .desc-list li::before{ content:""; position:absolute; left:0; top:10px; width:10px; height:10px; border-radius:50%; box-shadow:0 6px 12px rgba(15,43,10,.15); }
+        .purpose-card.variant-orange .desc-list li::before{ background: linear-gradient(145deg, var(--clr-orange), var(--clr-gold)); }
+        .purpose-card.variant-coral .desc-list li::before{ background: linear-gradient(145deg, var(--clr-coral), var(--clr-orange)); }
+        .purpose-card.variant-gold .desc-list li::before{ background: linear-gradient(145deg, var(--clr-gold), var(--clr-sand)); }
+        /* Alignment overrides: Visi & Misi content */
+          .purpose-card.variant-coral .desc{ text-align:center; }
+          .purpose-card.variant-orange .desc{ text-align:left; }
+          .purpose-card.variant-orange .desc-list{ text-align:left; justify-items:start; }
+          /* Alignment: Tujuan content center */
+          .purpose-card.variant-gold .desc{ text-align:center; }
+         </style>
+  <style>
+  /* Footer gradient: white → cream */
+  .footer-area { background: linear-gradient(to bottom, #ffffff 0%, #eadfcd 100%); }
+  .footer-area .footer-top, .footer-area .footer-bottom { background: transparent; }
+</style>
+</head>
+
+<body>
+
+
+    <!-- body wrap start -->
+    <div class="body_wrap">
+
+        <!-- preloder start -->
+        <div id="loading">
+            <div id="loading-center">
+                <div id="loading-center-absolute">
+                    <div class="object" id="object_one"></div>
+                    <div class="object" id="object_two"></div>
+                    <div class="object" id="object_three"></div>
+                    <div class="object" id="object_four"></div>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- preloder end -->
+
+        <!-- back to top start -->
+        <div class="progress-wrap">
+            <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+            </svg>
+        </div>
+        <!-- back to top end -->
+
+        <!-- header start -->
+        <header class="header-area">
+            <!-- <div class="header-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <ul class="left">
+                                <li><span><i class="far fa-clock"></i></span> 9:30am - 6:30pm Mon - Sun</li>
+                                <li><span><i class="far fa-phone"></i></span> +800-123-4567 6587</li>
+                                <li><span><i class="far fa-map-marker-alt"></i></span> Anmoore Road Brooklyn, NY 230
+                                </li>
+                            </ul>
+                            <ul class="right">
+                                <li><a href="#!"><i class="fab fa-facebook-messenger"></i></a></li>
+                                <li><a href="#!"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#!"><i class="fab fa-vimeo-v"></i></a></li>
+                                <li><a href="#!"><i class="fab fa-skype"></i></a></li>
+                                <li><a href="#!"><i class="fas fa-rss"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <div class="header-bottom-area" data-uk-sticky="top: 250; animation: uk-animation-slide-top;">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-xl-2 col-lg-2 col-6">
+                            <div class="logo">
+                                <a href="Home.html"><h1>Logo</h1></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-7 col-lg-7 d-none d-lg-block">
+                            <div class="main-menu-wrap">
+                                <nav id="mobile-menu" class="main-menu">
+                                    <ul class="main-menu-list ul_li">
+                                        <li><a href="Home.html">Home</a></li>
+                                        <li><a href="Harus-Jadi-Juara.html">Harus Jadi Juara</a></li>
+                                        <!-- <li class="menu-item-has-children"><a href="#!">Jadi Juara</a>
+                                            <ul class="submenu">
+                                                <li><a href="teachers.html">Teachers</a></li>
+                                                <li><a href="teacher-single.html">Teacher Details</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item-has-children">
+                                            <a href="classes.html">Classes</a>
+                                            <ul class="submenu">
+                                                <li><a href="classes.html">Classes</a></li>
+                                                <li><a href="class-single.html">Class Details</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item-has-children">
+                                            <a href="shop.html">Shop</a>
+                                            <ul class="submenu">
+                                                <li><a href="shop.html">Shop Sidebar</a></li>
+                                                <li><a href="shop-single.html">Shop Details</a></li>
+                                                <li><a href="cart.html">Cart</a></li>
+                                                <li><a href="checkout.html">Checkout</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item-has-children"><a href="blog.html">Blog</a>
+                                            <ul class="submenu">
+                                                <li><a href="blog.html">Blog</a></li>
+                                                <li><a href="blog-details.html">Blog Details</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="contact.html">Contact</a></li> -->
+                                        <li class="active"><a href="Jadi-Juara.html">Jadi Juara</a>
+                                        <li><a href="Paket-Belajar.html">Paket Belajar</a>
+                                        <li><a href="Kontak.html">Kontak</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-6">
+                            <div class="header-right">
+                                <div class="header-btn">
+                                    <a class="thm-btn" href="contact.html">Daftar Sekarang</a>
+                                </div>
+                                <div class="side-mobile-menu">
+                                    <button class="side-info-close"><i class="far fa-times"></i></button>
+                                    <div class="mobile-menu"></div>
+                                </div>
+                                <div class="side-menu-icon d-lg-none">
+                                    <button class="side-toggle"><i class="far fa-bars"></i></button>
+                                </div>
+                                <div class="offcanvas-overlay"></div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header end -->
+
+        <main class="juara-page">
+         <!-- page title start -->
+         <div class="page-title-area section-notch pt-170 pb-170" data-background="assets/img/bg/page-title-bg.jpg">
+            <div class="banner-overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="page-title">
+                            <h2>Jadi Juara</h2>
+                            <div class="breadcrumb-list text-left">
+                                <ul>
+                                    <li><a href="Home.html">Home</a></li>
+                                    <li>Jadi Juara</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- page title end -->
+
+        <!-- Section 1: Sejarah Jadi Juara -->
+        <section class="history-section section-notch will-animate" data-animate="fadeInUp" data-animate-delay="0.05s">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="section-title text-center mb-50">
+                            <h2 class="title">Sejarah Jadi Juara</h2>
+                            <p>Sejak awal berdiri, Jadi Juara berfokus pada pendampingan belajar yang menyenangkan dan berdampak nyata. Kami tumbuh dari komunitas kecil yang peduli pada masa depan siswa, menjadi gerakan belajar dengan mentor profesional dan pendekatan adaptif.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="history-wrap">
+                    <div class="history-media will-animate" data-animate="fadeInLeft" data-animate-delay="0.1s">
+                        <img src="assets/img/slider/slide-01.jpg" alt="Sejarah Jadi Juara">
+                        <span class="blob blob-1"></span>
+                        <span class="blob blob-2"></span>
+                    </div>
+                    <div class="history-content will-animate" data-animate="fadeInRight" data-animate-delay="0.15s">
+                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p class="lead">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <div class="history-badges">
+                            <span class="history-badge">Komunitas Belajar</span>
+                            <span class="history-badge">Mentor Terbaik</span>
+                            <span class="history-badge">Performa Terukur</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Visi Misi Tujuan -->
+        <section class="purpose-section will-animate" data-animate="fadeInUp" data-animate-delay="0.08s">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="section-title text-center mb-40">
+                            <h2 class="title">Visi Misi Tujuan</h2>
+                            <p>Kami bergerak dengan arah jelas untuk hasil maksimal.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="purpose-grid">
+                    <div class="purpose-card variant-coral will-animate" data-animate="fadeInUp" data-animate-delay="0.12s">
+                        <div class="card-head">
+                             <span class="icon-badge"><i class="fas fa-bullseye"></i></span>
+                             <span class="label">Visi</span>
+                         </div>
+                        <h5 class="title">Menjadi platform bimbingan belajar yang paling berdampak.</h5>
+                        <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <span class="accent"></span>
+                    </div>
+                    <div class="purpose-card variant-orange will-animate" data-animate="fadeInUp" data-animate-delay="0.2s">
+                        <div class="card-head">
+                             <span class="icon-badge"><i class="fas fa-rocket"></i></span>
+                             <span class="label">Misi</span>
+                         </div>
+                        <h5 class="title">Misi kami untuk hasil belajar maksimal</h5>
+                        <ul class="desc-list">
+                            <li>Pembelajaran adaptif sesuai kebutuhan setiap siswa.</li>
+                            <li>Pengukuran kemajuan yang terukur dan transparan.</li>
+                            <li>Materi relevan dan praktis berbasis kurikulum.</li>
+                            <li>Pendampingan rutin oleh mentor berpengalaman.</li>
+                            <li>Peningkatan berkelanjutan berbasis data dan umpan balik.</li>
+                        </ul>
+                        <span class="accent"></span>
+                    </div>
+                    <div class="purpose-card big variant-gold will-animate" data-animate="fadeInUp" data-animate-delay="0.28s">
+                        <div class="card-head">
+                             <span class="icon-badge"><i class="fas fa-flag-checkered"></i></span>
+                             <span class="label">Tujuan</span>
+                         </div>
+                        <h5 class="title">Meningkatkan rasa percaya diri dan capaian akademik siswa.</h5>
+                        <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <span class="accent"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Tim Jadi Juara -->
+        <section class="team-section section-notch will-animate" data-animate="fadeInUp" data-animate-delay="0.1s">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="section-title text-center mb-45">
+                            <h2 class="title">Tim Jadi Juara</h2>
+                            <p>Kenalan dengan para mentor dan penggerak program.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-grid">
+                    <div class="team-card will-animate" data-animate="fadeInUp" data-animate-delay="0.12s">
+                        <img class="avatar" src="assets/img/teacher/img-01.jpg" alt="Raka">
+                        <div class="meta"><div class="name">Raka</div><div class="role">Head Coach</div></div>
+                    </div>
+                    <div class="team-card will-animate" data-animate="fadeInUp" data-animate-delay="0.16s">
+                        <img class="avatar" src="assets/img/teacher/img-02.jpg" alt="Dini">
+                        <div class="meta"><div class="name">Dini</div><div class="role">Academic Lead</div></div>
+                    </div>
+                    <div class="team-card will-animate" data-animate="fadeInUp" data-animate-delay="0.2s">
+                        <img class="avatar" src="assets/img/teacher/img-03.jpg" alt="Aji">
+                        <div class="meta"><div class="name">Aji</div><div class="role">Problem Solving Coach</div></div>
+                    </div>
+                    <div class="team-card will-animate" data-animate="fadeInUp" data-animate-delay="0.24s">
+                        <img class="avatar" src="assets/img/teacher/img-04.jpg" alt="Nadia">
+                        <div class="meta"><div class="name">Nadia</div><div class="role">Mentor & Reviewer</div></div>
+                    </div>
+                    <div class="team-card will-animate" data-animate="fadeInUp" data-animate-delay="0.28s">
+                        <img class="avatar" src="assets/img/teacher/img-05.jpg" alt="Fajar">
+                        <div class="meta"><div class="name">Fajar</div><div class="role">Learning Designer</div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Alamat -->
+        <section class="address-section section-notch will-animate" data-animate="fadeInUp" data-animate-delay="0.12s">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="section-title text-center mb-40">
+                            <h2 class="title">Alamat</h2>
+                            <p>Kami senang bertemu dan mendengar kabar darimu.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="address-wrap">
+                    <div class="map-embed will-animate" data-animate="fadeInLeft" data-animate-delay="0.15s">
+                        <iframe src="https://www.google.com/maps?q=Jalan%20Belajar%20No.%207%2C%20Bandung%2C%20Jawa%20Barat&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                    </div>
+                    <div class="address-card will-animate" data-animate="fadeInRight" data-animate-delay="0.18s">
+                        <h5>Hubungi & Kunjungi</h5>
+                        <div class="address-list">
+                            <div class="address-item">
+                                <div class="icon coral"><i class="far fa-map-marker-alt" style="color:#fff"></i></div>
+                                <div>
+                                    <strong>Alamat</strong>
+                                    <div>Jalan Prof Sudarto</div>
+                                </div>
+                            </div>
+                            <div class="address-item">
+                                <div class="icon green"><i class="far fa-phone" style="color:#fff"></i></div>
+                                <div>
+                                    <strong>Telepon</strong>
+                                    <div>+62 812-1234-5678</div>
+                                </div>
+                            </div>
+                            <div class="address-item">
+                                <div class="icon gold"><i class="far fa-envelope"></i></div>
+                                <div>
+                                    <strong>Email</strong>
+                                    <div>halo@jadijuara.id</div>
+                                </div>
+                            </div>
+                            <div class="address-item">
+                                <div class="icon green"><i class="far fa-clock" style="color:#fff"></i></div>
+                                <div>
+                                    <strong>Jam Operasional</strong>
+                                    <div>Senin–Jumat 09:00–18:00</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        </main>
+        <!-- footer start -->
+        <footer>
+            <div class="footer-area">
+                <div class="footer-bottom pt-100 pb-60">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-4 col-lg-4 col-md-6">
+                                <div class="footer-widget mb-40">
+                                    <h3>About Kinter</h3>
+                                    <p>Monotne deplos copertve chanva andng crorate Qhanin Unique Qnderwhe Premum Convere With Uheng Mutmed Nquel Undehee Mandnge theme Qhann Unqu Qndewhe Premum Converenc With Aheing Mutmeda Nquel Undehele</p>
+                                    <div class="footer-social">
+                                        <h4>Follow us :</h4>
+                                        <a href="#!"><i class="fab fa-twitter"></i></a>
+                                        <a href="#!"><i class="fas fa-rss"></i></a>
+                                        <a href="#!"><i class="fab fa-dribbble"></i></a>
+                                        <a href="#!"><i class="fab fa-behance"></i></a>
+                                        <a href="#!"><i class="fab fa-instagram"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6">
+                                <div class="footer-widget mb-40">
+                                    <h3>Kontak Person</h3>
+                                    <ul class="contact-list">
+                                        <li><i class="fas fa-user"></i> Admin Jadi Juara</li>
+                                        <li><i class="fas fa-phone"></i> <a href="tel:+6281234567890">+62 812-3456-7890</a></li>
+                                        <li><i class="fas fa-envelope"></i> <a href="mailto:jadijuara@gmail.com">jadijuara@gmail.com</a></li>
+                                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/6281234567890" target="_blank" rel="noopener">WhatsApp: +62 812-3456-7890</a></li>
+                                        <li><i class="fas fa-map-marker-alt"></i> Tembalang, Indonesia</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6">
+                                <div class="footer-widget mb-40">
+                                    <h3>Newsletter Subscription</h3>
+                                    <p>Enter your email and get latest updates and offers subscribe us</p>
+                                    <form action="#!">
+                                        <input type="text" placeholder="Enter your email">
+                                        <button class="thm-btn">Subscribe Now!</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer end -->
+
+        
+    </div>
+    <!-- body wrap end -->
+
+    <!-- jquery include -->
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/jquery.meanmenu.min.js"></script>
+    <script src="assets/js/jqueryui.js"></script>
+    <script src="assets/js/touchspin.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/odometer.min.js"></script>
+    <script src="assets/js/uikit.min.js"></script>
+    <script src="assets/js/jquery.appear.js"></script>
+    <script src="assets/js/swiper.min.js"></script>
+    <script src="assets/js/backToTop.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+
+<!-- Mirrored from html.xpressbuddy.com/kinter/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 15 Oct 2025 10:39:01 GMT -->
+</html>

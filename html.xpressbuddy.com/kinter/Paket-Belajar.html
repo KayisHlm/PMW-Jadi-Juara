@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="zxx">
+
+
+<!-- Mirrored from html.xpressbuddy.com/kinter/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 15 Oct 2025 10:38:58 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Kinter - School Kindergarten HTML Template</title>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+
+    <!-- css include -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/swiper.min.css">
+    <link rel="stylesheet" href="assets/css/meanmenu.css">
+    <link rel="stylesheet" href="assets/css/jquery-ui.css">
+    <link rel="stylesheet" href="assets/css/uikit.min.css">
+    <link rel="stylesheet" href="assets/css/odometer.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <style>
+        /* Paket Belajar — page-scoped styles */
+        .paket-page .page-title-area { position: relative; }
+        .paket-page .page-title-area .banner-overlay { background: linear-gradient(135deg, rgba(15,23,42,.6), rgba(79,70,229,.35)); opacity: 1; }
+
+        .paket-section { position: relative; padding: 120px 0; overflow: hidden; }
+        .paket-section .section-title { margin-bottom: 40px; }
+        .paket-section .section-title .title { font-size: 42px; line-height: 1.15; letter-spacing: .5px; background: linear-gradient(90deg, var(--accent-1), var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .paket-section p.lead { font-size: 18px; color: #475569; }
+
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+        .paket-card { border-radius: 18px; background: #ffffff; box-shadow: 0 12px 30px rgba(2,6,23,.08); padding: 28px; position: relative; overflow: hidden; transform: translateY(8px); opacity: 0; transition: transform .6s ease, box-shadow .6s ease, opacity .6s ease; }
+        .paket-card:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(2,6,23,.12); }
+        .paket-card .icon { width: 56px; height: 56px; border-radius: 16px; display: grid; place-items: center; color: #fff; margin-bottom: 16px; }
+        .paket-card .title { font-size: 20px; margin-bottom: 10px; }
+        .paket-card .desc { color: #64748b; }
+
+        .shape { position: absolute; border-radius: 50%; filter: blur(24px); opacity: .35; }
+
+        .paket-ipas { --accent-1: #10b981; --accent-2: #22c55e; background: linear-gradient(180deg, #f8fafc 0%, #ECFDF5 60%, #f8fafc 100%); }
+        .paket-ipas .icon { background: linear-gradient(135deg, #10b981, #22c55e); }
+
+        .paket-english { --accent-1: #3b82f6; --accent-2: #8b5cf6; background: linear-gradient(180deg, #f8fafc 0%, #EEF2FF 60%, #f8fafc 100%); }
+        .paket-english .icon { background: linear-gradient(135deg, #3b82f6, #8b5cf6); }
+
+        .paket-math { --accent-1: #f59e0b; --accent-2: #ef4444; background: linear-gradient(180deg, #f8fafc 0%, #FFF7ED 60%, #f8fafc 100%); }
+        .paket-math .icon { background: linear-gradient(135deg, #f59e0b, #ef4444); }
+
+        .paket-bindo { --accent-1: #ec4899; --accent-2: #f43f5e; background: linear-gradient(180deg, #f8fafc 0%, #FDF2F8 60%, #f8fafc 100%); }
+        .paket-bindo .icon { background: linear-gradient(135deg, #ec4899, #f43f5e); }
+
+        .will-animate { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+        .will-animate.animate-in { opacity: 1; transform: translateY(0); }
+        .will-animate[data-animate="fadeInLeft"] { transform: translateX(-18px); }
+        .will-animate[data-animate="fadeInRight"] { transform: translateX(18px); }
+        .will-animate.animate-in[data-animate="fadeInLeft"],
+        .will-animate.animate-in[data-animate="fadeInRight"] { transform: translateX(0); }
+
+        @media (max-width: 991px) {
+            .paket-section { padding: 90px 0; }
+            .paket-section .section-title .title { font-size: 34px; }
+        }
+        /* Smooth boundaries between sections */
+        .paket-section { box-shadow: inset 0 24px 48px -36px rgba(2,6,23,.06), inset 0 -24px 48px -36px rgba(2,6,23,.06); }
+        .paket-section::before, .paket-section::after { content: ""; position: absolute; left: 0; right: 0; height: 80px; pointer-events: none; z-index: 0; }
+        .paket-section::before { top: 0; background: linear-gradient(to bottom, #f8fafc 0%, rgba(248,250,252,0) 100%); }
+        .paket-section::after { bottom: 0; background: linear-gradient(to top, #f8fafc 0%, rgba(248,250,252,0) 100%); }
+        .paket-section .container { position: relative; z-index: 1; }
+        @media (max-width: 991px) { .paket-section::before, .paket-section::after { height: 60px; } }
+        /* IPAS top: white gradient overlay */
+        .paket-ipas::before { background: linear-gradient(to bottom, #ffffff 0%, rgba(255,255,255,0) 100%); height: 100px; }
+    </style>
+<style>
+  /* Footer gradient: white → cream */
+  .footer-area { background: linear-gradient(to bottom, #ffffff 0%, #eadfcd 100%); }
+  .footer-area .footer-top, .footer-area .footer-bottom { background: transparent; }
+</style>
+<style>
+  /* Bindo bottom: white gradient overlay */
+  .paket-bindo::after { background: linear-gradient(to top, #ffffff 0%, rgba(255,255,255,0) 100%); height: 100px; }
+</style>
+</head>
+
+<body class="paket-page">
+
+
+    <!-- body wrap start -->
+    <div class="body_wrap">
+
+        <!-- preloder start -->
+        <div id="loading">
+            <div id="loading-center">
+                <div id="loading-center-absolute">
+                    <div class="object" id="object_one"></div>
+                    <div class="object" id="object_two"></div>
+                    <div class="object" id="object_three"></div>
+                    <div class="object" id="object_four"></div>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- preloder end -->
+
+        <!-- back to top start -->
+        <div class="progress-wrap">
+            <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+            </svg>
+        </div>
+        <!-- back to top end -->
+
+        <!-- header start -->
+        <header class="header-area">
+            <!-- <div class="header-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <ul class="left">
+                                <li><span><i class="far fa-clock"></i></span> 9:30am - 6:30pm Mon - Sun</li>
+                                <li><span><i class="far fa-phone"></i></span> +800-123-4567 6587</li>
+                                <li><span><i class="far fa-map-marker-alt"></i></span> Anmoore Road Brooklyn, NY 230
+                                </li>
+                            </ul>
+                            <ul class="right">
+                                <li><a href="#!"><i class="fab fa-facebook-messenger"></i></a></li>
+                                <li><a href="#!"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#!"><i class="fab fa-vimeo-v"></i></a></li>
+                                <li><a href="#!"><i class="fab fa-skype"></i></a></li>
+                                <li><a href="#!"><i class="fas fa-rss"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <div class="header-bottom-area" data-uk-sticky="top: 250; animation: uk-animation-slide-top;">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-xl-2 col-lg-2 col-6">
+                            <div class="logo">
+                                <a href="Home.html"><h1>Logo</h1></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-7 col-lg-7 d-none d-lg-block">
+                            <div class="main-menu-wrap">
+                                <nav id="mobile-menu" class="main-menu">
+                                    <ul class="main-menu-list ul_li">
+                                        <li><a href="Home.html">Home</a></li>
+                                        <li><a href="Harus-Jadi-Juara.html">Harus Jadi Juara</a></li>
+                                        <!-- <li class="menu-item-has-children"><a href="#!">Jadi Juara</a>
+                                            <ul class="submenu">
+                                                <li><a href="teachers.html">Teachers</a></li>
+                                                <li><a href="teacher-single.html">Teacher Details</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item-has-children">
+                                            <a href="classes.html">Classes</a>
+                                            <ul class="submenu">
+                                                <li><a href="classes.html">Classes</a></li>
+                                                <li><a href="class-single.html">Class Details</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item-has-children">
+                                            <a href="shop.html">Shop</a>
+                                            <ul class="submenu">
+                                                <li><a href="shop.html">Shop Sidebar</a></li>
+                                                <li><a href="shop-single.html">Shop Details</a></li>
+                                                <li><a href="cart.html">Cart</a></li>
+                                                <li><a href="checkout.html">Checkout</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item-has-children"><a href="blog.html">Blog</a>
+                                            <ul class="submenu">
+                                                <li><a href="blog.html">Blog</a></li>
+                                                <li><a href="blog-details.html">Blog Details</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="contact.html">Contact</a></li> -->
+                                        <li><a href="Jadi-Juara.html">Jadi Juara</a>
+                                        <li class="active"><a href="Paket-Belajar.html">Paket Belajar</a>
+                                        <li><a href="Kontak.html">Kontak</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-6">
+                            <div class="header-right">
+                                <div class="header-btn">
+                                    <a class="thm-btn" href="contact.html">Daftar Sekarang</a>
+                                </div>
+                                <div class="side-mobile-menu">
+                                    <button class="side-info-close"><i class="far fa-times"></i></button>
+                                    <div class="mobile-menu"></div>
+                                </div>
+                                <div class="side-menu-icon d-lg-none">
+                                    <button class="side-toggle"><i class="far fa-bars"></i></button>
+                                </div>
+                                <div class="offcanvas-overlay"></div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header end -->
+
+        <main>
+         <!-- page title start -->
+         <div class="page-title-area section-notch pt-170 pb-170" data-background="assets/img/bg/page-title-bg.jpg">
+            <div class="banner-overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="page-title">
+                            <h2>Paket Belajar</h2>
+                            <div class="breadcrumb-list text-left">
+                                <ul>
+                                    <li><a href="Home.html">Home</a></li>
+                                    <li>Paket Belajar</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- page title end -->
+
+        <!-- IPAS start -->
+        <section class="paket-section paket-ipas will-animate" >
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="section-title text-center mb-40">
+                            <h2 class="title">IPAS</h2>
+                            <p class="lead">Belajar sains terapan dengan eksperimen dan observasi seru.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-grid">
+                    <div class="paket-card will-animate" data-animate="fadeInUp" data-animate-delay="0.1s">
+                        <div class="icon"><i class="fas fa-flask"></i></div>
+                        <div class="title">Eksperimen</div>
+                        <div class="desc">Praktik sederhana yang bikin konsep sains langsung nyantol.</div>
+                    </div>
+                    <div class="paket-card will-animate" data-animate="fadeInUp" data-animate-delay="0.2s">
+                        <div class="icon"><i class="fas fa-seedling"></i></div>
+                        <div class="title">Observasi</div>
+                        <div class="desc">Amati fenomena sekitar dan olah jadi insight bermakna.</div>
+                    </div>
+                    <div class="paket-card will-animate" data-animate="fadeInUp" data-animate-delay="0.3s">
+                        <div class="icon"><i class="fas fa-atom"></i></div>
+                        <div class="title">Analisis Data</div>
+                        <div class="desc">Belajar membaca data, membuat kesimpulan, dan laporan singkat.</div>
+                    </div>
+                </div>
+            </div>
+            <span class="shape" style="width:160px;height:160px;background:#22c55e;left:-40px;top:60px;"></span>
+            <span class="shape" style="width:120px;height:120px;background:#10b981;right:10%;bottom:60px;"></span>
+        </section>
+        <!-- IPAS end -->
+
+        <!-- Bahasa Inggris start -->
+        <section class="paket-section paket-english will-animate">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="section-title text-center mb-40">
+                            <h2 class="title">Bahasa Inggris</h2>
+                            <p class="lead">Kuasi speaking, grammar, dan vocabulary dengan latihan interaktif.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-grid">
+                    <div class="paket-card will-animate" data-animate="fadeInLeft" data-animate-delay="0.1s">
+                        <div class="icon"><i class="fas fa-comments"></i></div>
+                        <div class="title">Speaking Practice</div>
+                        <div class="desc">Simulasi percakapan dan pronunciation yang natural.</div>
+                    </div>
+                    <div class="paket-card will-animate" data-animate="fadeInUp" data-animate-delay="0.2s">
+                        <div class="icon"><i class="fas fa-book"></i></div>
+                        <div class="title">Grammar Boost</div>
+                        <div class="desc">Rumus cepat, contoh jelas, dan latihan kontekstual.</div>
+                    </div>
+                    <div class="paket-card will-animate" data-animate="fadeInRight" data-animate-delay="0.3s">
+                        <div class="icon"><i class="fas fa-language"></i></div>
+                        <div class="title">Vocabulary Builder</div>
+                        <div class="desc">Kata-kata esensial, idiom, dan collocation yang sering dipakai.</div>
+                    </div>
+                </div>
+            </div>
+            <span class="shape" style="width:160px;height:160px;background:#8b5cf6;right:-40px;top:60px;"></span>
+            <span class="shape" style="width:120px;height:120px;background:#3b82f6;left:10%;bottom:60px;"></span>
+        </section>
+        <!-- Bahasa Inggris end -->
+
+        <!-- Matematika start -->
+        <section class="paket-section paket-math will-animate" >
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="section-title text-center mb-40">
+                            <h2 class="title">Matematika</h2>
+                            <p class="lead">Konsep jernih, trik cepat, dan latihan soal terarah.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-grid">
+                    <div class="paket-card will-animate" data-animate="fadeInLeft" data-animate-delay="0.1s">
+                        <div class="icon"><i class="fas fa-calculator"></i></div>
+                        <div class="title">Aritmetika & Aljabar</div>
+                        <div class="desc">Pemahaman dasar kuat untuk menyelesaikan soal bervariasi.</div>
+                    </div>
+                    <div class="paket-card will-animate" data-animate="fadeInUp" data-animate-delay="0.2s">
+                        <div class="icon"><i class="fas fa-shapes"></i></div>
+                        <div class="title">Geometri & Trigonometri</div>
+                        <div class="desc">Visualisasi bentuk, sudut, dan relasi yang mudah dipahami.</div>
+                    </div>
+                    <div class="paket-card will-animate" data-animate="fadeInRight" data-animate-delay="0.3s">
+                        <div class="icon"><i class="fas fa-chart-line"></i></div>
+                        <div class="title">Statistika & Peluang</div>
+                        <div class="desc">Analisis data dan peluang kejadian dengan contoh nyata.</div>
+                    </div>
+                </div>
+            </div>
+            <span class="shape" style="width:160px;height:160px;background:#f59e0b;left:-50px;bottom:20px;"></span>
+            <span class="shape" style="width:120px;height:120px;background:#ef4444;right:12%;top:40px;"></span>
+        </section>
+        <!-- Matematika end -->
+
+        <!-- Bahasa Indonesia start -->
+        <section class="paket-section paket-bindo will-animate" >
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="section-title text-center mb-40">
+                            <h2 class="title">Bahasa Indonesia</h2>
+                            <p class="lead">Baca, tulis, dan kaidah bahasa yang rapi dan efektif.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-grid">
+                    <div class="paket-card will-animate" data-animate="fadeInLeft" data-animate-delay="0.1s">
+                        <div class="icon"><i class="fas fa-book-open"></i></div>
+                        <div class="title">Membaca & Memahami</div>
+                        <div class="desc">Teknik memahami teks, ide pokok, dan inferensi.</div>
+                    </div>
+                    <div class="paket-card will-animate" data-animate="fadeInUp" data-animate-delay="0.2s">
+                        <div class="icon"><i class="fas fa-pen-nib"></i></div>
+                        <div class="title">Menulis & Struktur</div>
+                        <div class="desc">Menyusun paragraf, tanda baca, dan pilihan kata yang tepat.</div>
+                    </div>
+                    <div class="paket-card will-animate" data-animate="fadeInRight" data-animate-delay="0.3s">
+                        <div class="icon"><i class="fas fa-feather-alt"></i></div>
+                        <div class="title">Gaya Bahasa</div>
+                        <div class="desc">Pemakaian majas, kalimat efektif, dan ragam tulisan.</div>
+                    </div>
+                </div>
+            </div>
+            <span class="shape" style="width:160px;height:160px;background:#ec4899;right:-50px;bottom:60px;"></span>
+            <span class="shape" style="width:120px;height:120px;background:#f43f5e;left:8%;top:60px;"></span>
+        </section>
+        <!-- Bahasa Indonesia end -->
+
+        </main>
+
+        <!-- footer start -->
+        <footer>
+            <div class="footer-area">
+                <div class="footer-bottom pt-100 pb-60">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-4 col-lg-4 col-md-6">
+                                <div class="footer-widget mb-40">
+                                    <h3>About Kinter</h3>
+                                    <p>Monotne deplos copertve chanva andng crorate Qhanin Unique Qnderwhe Premum Convere With Uheng Mutmed Nquel Undehee Mandnge theme Qhann Unqu Qndewhe Premum Converenc With Aheing Mutmeda Nquel Undehele</p>
+                                    <div class="footer-social">
+                                        <h4>Follow us :</h4>
+                                        <a href="#!"><i class="fab fa-twitter"></i></a>
+                                        <a href="#!"><i class="fas fa-rss"></i></a>
+                                        <a href="#!"><i class="fab fa-dribbble"></i></a>
+                                        <a href="#!"><i class="fab fa-behance"></i></a>
+                                        <a href="#!"><i class="fab fa-instagram"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6">
+                                <div class="footer-widget mb-40">
+                                    <h3>Kontak Person</h3>
+                                    <ul class="contact-list">
+                                        <li><i class="fas fa-user"></i> Admin Jadi Juara</li>
+                                        <li><i class="fas fa-phone"></i> <a href="tel:+6281234567890">+62 812-3456-7890</a></li>
+                                        <li><i class="fas fa-envelope"></i> <a href="mailto:jadijuara@gmail.com">jadijuara@gmail.com</a></li>
+                                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/6281234567890" target="_blank" rel="noopener">WhatsApp: +62 812-3456-7890</a></li>
+                                        <li><i class="fas fa-map-marker-alt"></i> Tembalang, Indonesia</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6">
+                                <div class="footer-widget mb-40">
+                                    <h3>Newsletter Subscription</h3>
+                                    <p>Enter your email and get latest updates and offers subscribe us</p>
+                                    <form action="#!">
+                                        <input type="text" placeholder="Enter your email">
+                                        <button class="thm-btn">Subscribe Now!</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer end -->
+
+        
+    </div>
+    <!-- body wrap end -->
+
+    <!-- jquery include -->
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/jquery.meanmenu.min.js"></script>
+    <script src="assets/js/jqueryui.js"></script>
+    <script src="assets/js/touchspin.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/odometer.min.js"></script>
+    <script src="assets/js/uikit.min.js"></script>
+    <script src="assets/js/jquery.appear.js"></script>
+    <script src="assets/js/swiper.min.js"></script>
+    <script src="assets/js/backToTop.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+      (function(){
+        var els = Array.prototype.slice.call(document.querySelectorAll('.will-animate'));
+        if(!('IntersectionObserver' in window)) { els.forEach(function(el){ el.classList.add('animate-in'); }); return; }
+        var io = new IntersectionObserver(function(entries){
+          entries.forEach(function(entry){
+            if(entry.isIntersecting){
+              var el = entry.target;
+              var delay = el.getAttribute('data-animate-delay');
+              if(delay) { el.style.transitionDelay = delay; }
+              el.classList.add('animate-in');
+              io.unobserve(el);
+            }
+          });
+        },{ threshold: 0.15 });
+        els.forEach(function(el){ io.observe(el); });
+      })();
+    </script>
+</body>
+
+
+<!-- Mirrored from html.xpressbuddy.com/kinter/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 15 Oct 2025 10:39:01 GMT -->
+</html>
