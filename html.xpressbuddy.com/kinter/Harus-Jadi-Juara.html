@@ -110,6 +110,24 @@
   @media (max-width: 576px) {
     .method-area-new .method-timeline { grid-template-columns: 1fr; }
   }
+/* Value grid: single row of four columns */
+.value-area-new .value-grid-new {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(220px, 1fr)) !important;
+  gap: 24px;
+  align-items: stretch;
+}
+/* Responsive fallbacks */
+@media (max-width: 992px) {
+  .value-area-new .value-grid-new {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+  }
+}
+@media (max-width: 576px) {
+  .value-area-new .value-grid-new {
+    grid-template-columns: 1fr;
+  }
+}
 </style>
 </head>
 
