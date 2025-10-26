@@ -176,16 +176,21 @@
     radial-gradient(900px 500px at 120% -20%, rgba(230,190,70,.12), transparent 52%),
     linear-gradient(to bottom, var(--clr-white) 0%, var(--clr-sand) 100%);
 }
-.team-grid{ display:grid; grid-template-columns: repeat(5, minmax(150px,1fr)); gap:22px; }
-@media (max-width: 991px){ .team-grid{ grid-template-columns: repeat(3, 1fr);} }
-@media (max-width: 575px){ .team-grid{ grid-template-columns: repeat(2, 1fr);} }
+.team-grid{ display:grid; grid-template-columns: repeat(4, minmax(260px, 1fr)); gap:28px; align-items: stretch; }
+@media (max-width: 991px){ .team-grid{ grid-template-columns: repeat(4, minmax(240px, 1fr)); } }
+@media (max-width: 575px){ .team-grid{ grid-template-columns: repeat(4, minmax(220px, 1fr)); } }
 
 .team-card{ position:relative; border-radius:18px; overflow:hidden; background:#fff; box-shadow:0 12px 24px rgba(15,43,10,.10); transition: transform .25s ease, box-shadow .25s ease; }
 .team-card:hover{ transform: translateY(-6px); box-shadow:0 20px 34px rgba(15,43,10,.16); }
 .team-card .avatar{ aspect-ratio: 1 / 1; object-fit: cover; width:100%; }
-.team-card .meta{ padding:12px 14px; }
-.team-card .name{ font-weight:700; color:#1f2a1f; }
-.team-card .role{ font-size:14px; color:#4a5a4a; }
+.team-card .meta{ padding:16px 18px; text-align:center; }
+.team-card .name{ font-weight:800; font-size:18px; color:#1f2a1f; letter-spacing:.2px; }
+.team-card .role{
+  font-size:14px; color:#4a5a4a; margin-top:8px;
+  display:inline-block; padding:8px 12px; border-radius:999px;
+  background: rgba(231,187,72,.10); border:1px solid rgba(231,187,72,.28);
+  box-shadow: 0 8px 16px rgba(231,187,72,.20);
+}
 
 /* Section 4 - Address */
 .address-section{
@@ -384,7 +389,6 @@
                     <div class="col-lg-10">
                         <div class="section-title text-center mb-50">
                             <h2 class="title">Sejarah Jadi Juara</h2>
-                            <p>Sejak awal berdiri, Jadi Juara berfokus pada pendampingan belajar yang menyenangkan dan berdampak nyata. Kami tumbuh dari komunitas kecil yang peduli pada masa depan siswa, menjadi gerakan belajar dengan mentor profesional dan pendekatan adaptif.</p>
                         </div>
                     </div>
                 </div>
@@ -395,13 +399,7 @@
                         <span class="blob blob-2"></span>
                     </div>
                     <div class="history-content will-animate" data-animate="fadeInRight" data-animate-delay="0.15s">
-                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        <p class="lead">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <div class="history-badges">
-                            <span class="history-badge">Komunitas Belajar</span>
-                            <span class="history-badge">Mentor Terbaik</span>
-                            <span class="history-badge">Performa Terukur</span>
-                        </div>
+                        <p class="lead">Jadi Juara didirikan pada tahun 2025 oleh empat mahasiswa Universitas Diponegoro. Ide bisnis ini berawal dari tugas mata kuliah kewirausahaan. Para pendiri melihat adanya peluang untuk membantu mahasiswa yang mengalami kesulitan finansial dengan cara mempertemukan mereka (yang memiliki ketertarikan mengajar paruh waktu) dengan orang tua siswa Sekolah Dasar yang mencari tutor les privat.</p>                        
                     </div>
                 </div>
             </div>
@@ -470,24 +468,20 @@
                 <div class="team-grid">
                     <div class="team-card will-animate" data-animate="fadeInUp" data-animate-delay="0.12s">
                         <img class="avatar" src="assets/img/teacher/img-01.jpg" alt="Raka">
-                        <div class="meta"><div class="name">Raka</div><div class="role">Head Coach</div></div>
+                        <div class="meta"><div class="name">Nisriinaa Khaliilah P.</div><div class="role">Chief Executive Manager</div></div>
                     </div>
                     <div class="team-card will-animate" data-animate="fadeInUp" data-animate-delay="0.16s">
                         <img class="avatar" src="assets/img/teacher/img-02.jpg" alt="Dini">
-                        <div class="meta"><div class="name">Dini</div><div class="role">Academic Lead</div></div>
+                        <div class="meta"><div class="name">Lusi Sukmiati</div><div class="role">Chief Finance and Accounting</div></div>
                     </div>
                     <div class="team-card will-animate" data-animate="fadeInUp" data-animate-delay="0.2s">
                         <img class="avatar" src="assets/img/teacher/img-03.jpg" alt="Aji">
-                        <div class="meta"><div class="name">Aji</div><div class="role">Problem Solving Coach</div></div>
+                        <div class="meta"><div class="name">Lady Rahma Sabrina</div><div class="role">Chief Marketing Officer</div></div>
                     </div>
                     <div class="team-card will-animate" data-animate="fadeInUp" data-animate-delay="0.24s">
                         <img class="avatar" src="assets/img/teacher/img-04.jpg" alt="Nadia">
-                        <div class="meta"><div class="name">Nadia</div><div class="role">Mentor & Reviewer</div></div>
-                    </div>
-                    <div class="team-card will-animate" data-animate="fadeInUp" data-animate-delay="0.28s">
-                        <img class="avatar" src="assets/img/teacher/img-05.jpg" alt="Fajar">
-                        <div class="meta"><div class="name">Fajar</div><div class="role">Learning Designer</div></div>
-                    </div>
+                        <div class="meta"><div class="name">Aulia Putri Athifa</div><div class="role">Head of Frontend Developer</div></div>
+                    </div>               
                 </div>
             </div>
         </section>

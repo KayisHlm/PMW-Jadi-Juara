@@ -87,7 +87,81 @@
   /* Bindo bottom: white gradient overlay */
   .paket-bindo::after { background: linear-gradient(to top, #ffffff 0%, rgba(255,255,255,0) 100%); height: 100px; }
 </style>
-</head>
+<style>
+   /* Paket Belajar — pricing accents */
+   .paket-pricing { --accent-1: #0ea5e9; --accent-2: #22d3ee; background: linear-gradient(180deg, #f8fafc 0%, #E0F2FE 60%, #f8fafc 100%); --accent-shadow: rgba(14,165,233,0.28); }
+   .paket-pricing .icon { background: linear-gradient(135deg, var(--accent-1), var(--accent-2)); }
+   .pricing-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; }
+
+   /* Section edge white gradients (top & bottom) */
+   .paket-pricing::before, .paket-pricing::after { content: ""; position: absolute; left: 0; right: 0; height: 100px; pointer-events: none; z-index: 2; }
+   .paket-pricing::before { top: 0; background: linear-gradient(to bottom, #ffffff 0%, rgba(255,255,255,0) 100%); }
+   .paket-pricing::after { bottom: 0; background: linear-gradient(to top, #ffffff 0%, rgba(255,255,255,0) 100%); }
+   .paket-pricing .container { position: relative; z-index: 3; }
+   .paket-pricing .shape { z-index: 1; }
+   @media (max-width: 991px) { .paket-pricing::before, .paket-pricing::after { height: 80px; } }
+   /* Desain kartu baru: modern, animatif, berbasis palet warna */
+    .paket-card { position: relative; display: flex; flex-direction: column; height: 100%; padding: 22px; border-radius: 20px; border: 1px solid rgba(2,6,23,.08); background: radial-gradient(140% 140% at 0% 0%, #ffffff 0%, #F8FAFC 100%); box-shadow: 0 10px 30px rgba(2,6,23,.08); gap: 14px; overflow: hidden; transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+    .paket-card::before { content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1px; background: linear-gradient(135deg, var(--accent-1), var(--accent-2)); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; opacity: 0; transition: opacity .25s ease; }
+    .paket-card:hover { transform: translateY(-6px); box-shadow: 0 16px 42px rgba(2,6,23,.08), 0 20px 48px var(--accent-shadow); border-color: rgba(2,6,23,.12); }
+    .paket-card:hover::before { opacity: .55; }
+
+    /* Header */
+    .paket-card .card-header { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; padding: 8px 4px; min-height: auto; text-align: center; background: transparent; }
+    .paket-card .card-header .icon { width: 64px; height: 64px; border-radius: 18px; display: grid; place-items: center; background: linear-gradient(135deg, var(--accent-1), var(--accent-2)); color: #fff; position: relative; box-shadow: none; transition: transform .2s ease, filter .2s ease; }
+    .paket-card .card-header .icon:empty::before { content: "★"; font-size: 26px; line-height: 1; }
+    .paket-card:hover .card-header .icon { transform: translateY(-2px) scale(1.04); filter: drop-shadow(0 10px 22px var(--accent-shadow)) drop-shadow(0 0 14px rgba(14,165,233,0.35)); }
+     .paket-card .card-header .icon:hover { transform: translateY(-2px) scale(1.04); filter: drop-shadow(0 10px 22px var(--accent-shadow)) drop-shadow(0 0 14px rgba(14,165,233,0.35)); }
+    .paket-card .card-header .icon::after { display: none; }
+     /* pseudo-element glow disabled to prevent inner tinting of white icon */
+    .paket-card .card-header .icon:hover { transform: translateY(-2px) scale(1.04); }
+     /* icon glow handled via ::after; no drop-shadow on <i> */
+    .paket-card:hover .card-header .title { text-shadow: 0 3px 16px var(--accent-shadow); }
+    .paket-card .card-header .title:hover { text-shadow: 0 3px 16px var(--accent-shadow); }
+    .paket-card .card-header .title { position: relative; font-size: 20px; font-weight: 800; line-height: 1.3; margin: 0; letter-spacing: .2px; padding-bottom: 6px; }
+    .paket-card .card-header .title::after { content: ""; position: absolute; left: 50%; transform: translateX(-50%); bottom: 0; width: 56px; height: 3px; border-radius: 3px; background: linear-gradient(135deg, var(--accent-1), var(--accent-2)); opacity: .85; }
+
+    /* Body */
+    .paket-card .card-body { display: flex; flex-direction: column; gap: 10px; }
+    .paket-card .card-body .desc { margin: 0; color: #334155; line-height: 1.65; }
+    .paket-card .features { list-style: disc; padding-left: 1.2em; margin: 0; color: #475569; }
+    .paket-card .features li { margin-bottom: 6px; }
+
+    /* Footer: harga di atas, tombol di bawah (tanpa card wrapper) */
+    .paket-card .card-footer { margin-top: auto; display: flex; flex-direction: column; align-items: stretch; gap: 12px; background: transparent; }
+    .paket-card .price span { display: inline; background: transparent; border: 0; border-radius: 0; padding: 0; font-size: 18px; font-weight: 800; color: #0f172a; letter-spacing: .2px; box-shadow: none; }
+
+    /* CTA dengan animasi gradien */
+    .paket-card .thm-btn { width: 100%; display: inline-block; padding: 12px 16px; font-size: 14px; line-height: 1.2; border-radius: 12px; color: #fff; text-align: center; background-image: linear-gradient(135deg, var(--accent-1), var(--accent-2)); background-size: 200% 200%; transition: transform .2s ease, box-shadow .2s ease, filter .2s ease, background-position .3s ease; box-shadow: 0 10px 24px rgba(2,6,23,.12); }
+    .paket-card:hover .thm-btn { transform: translateY(-1px); }
+    .paket-card .thm-btn:hover { background-position: 100% 0; filter: brightness(1.06); box-shadow: 0 14px 28px var(--accent-shadow); }
+
+    /* Responsif */
+    @media (max-width: 520px) {
+      .paket-card { padding: 18px; border-radius: 16px; }
+      .paket-card .card-header .title { font-size: 18px; }
+      .paket-card .price span { font-size: 17px; padding: 8px 12px; }
+      .paket-card .thm-btn { font-size: 13px; padding: 11px 14px; }
+    }
+
+    .paket-card.highlight { border: 2px solid var(--accent-2); box-shadow: 0 20px 46px rgba(2,6,23,.12); }
+    .paket-card:hover .card-header, .paket-card:hover .card-body { filter: none; }
+   /* Benefit Utama — layout & styling */
+   .benefit-card .title { font-size: 22px; font-weight: 800; text-align: center; margin-bottom: 12px; letter-spacing: .2px; position: relative; padding-bottom: 8px; }
+   .benefit-card .title::after { content: ""; position: absolute; left: 50%; transform: translateX(-50%); bottom: 0; width: 88px; height: 3px; border-radius: 999px; background: linear-gradient(135deg, var(--accent-1), var(--accent-2)); opacity: .9; }
+
+   .benefit-card .desc { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px 16px; padding: 0; margin: 0; color: #334155; }
+   .benefit-card .desc li { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 8px; background: rgba(255,255,255,.90); border: 1px solid rgba(2,6,23,.06); border-radius: 14px; padding: 12px 14px; box-shadow: 0 8px 20px rgba(2,6,23,.06); transition: transform .2s ease, box-shadow .2s ease; }
+   .benefit-card .desc li:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(2,6,23,.08), 0 14px 30px var(--accent-shadow); }
+   .benefit-card .desc li i { flex: 0 0 auto; width: 32px; height: 32px; border-radius: 10px; display: grid; place-items: center; color: #fff; background: linear-gradient(135deg, var(--accent-1), var(--accent-2)); filter: drop-shadow(0 6px 14px var(--accent-shadow)); }
+   .benefit-card .desc li i::before { font-size: 16px; }
+        .benefit-card .desc .benefit-title { font-size: 16px; font-weight: 700; color: #0f172a; letter-spacing: .2px; }
+        .benefit-card .desc .benefit-text { font-size: 14px; color: #475569; line-height: 1.6; }
+   @media (max-width: 520px) {
+     .benefit-card .desc { grid-template-columns: 1fr; }
+   }
+ </style>
+ </head>
 
 <body class="paket-page">
 
@@ -183,141 +257,105 @@
         </div>
         <!-- page title end -->
 
-        <!-- IPAS start -->
-        <section class="paket-section paket-ipas will-animate" >
+        <!-- Paket Belajar (New Layout) start -->
+        <section class="paket-section paket-pricing will-animate">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-lg-8">
+                    <div class="col-lg-10">
                         <div class="section-title text-center mb-40">
-                            <h2 class="title">IPAS</h2>
-                            <p class="lead">Belajar sains terapan dengan eksperimen dan observasi seru.</p>
+                            <h2 class="title">Pilih Paket Juara Anda!</h2>
+                            <p class="lead">Tiga pilihan paket untuk menemani perjalanan belajar anak Anda. Semua paket sudah termasuk bimbingan mata pelajaran utama, materi lengkap, dan laporan kemajuan.</p>
                         </div>
                     </div>
                 </div>
-                <div class="card-grid">
-                    <div class="paket-card will-animate" data-animate="fadeInUp" data-animate-delay="0.1s">
-                        <div class="icon"><i class="fas fa-flask"></i></div>
-                        <div class="title">Eksperimen</div>
-                        <div class="desc">Praktik sederhana yang bikin konsep sains langsung nyantol.</div>
-                    </div>
-                    <div class="paket-card will-animate" data-animate="fadeInUp" data-animate-delay="0.2s">
-                        <div class="icon"><i class="fas fa-seedling"></i></div>
-                        <div class="title">Observasi</div>
-                        <div class="desc">Amati fenomena sekitar dan olah jadi insight bermakna.</div>
-                    </div>
-                    <div class="paket-card will-animate" data-animate="fadeInUp" data-animate-delay="0.3s">
-                        <div class="icon"><i class="fas fa-atom"></i></div>
-                        <div class="title">Analisis Data</div>
-                        <div class="desc">Belajar membaca data, membuat kesimpulan, dan laporan singkat.</div>
-                    </div>
-                </div>
-            </div>
-            <span class="shape" style="width:160px;height:160px;background:#22c55e;left:-40px;top:60px;"></span>
-            <span class="shape" style="width:120px;height:120px;background:#10b981;right:10%;bottom:60px;"></span>
-        </section>
-        <!-- IPAS end -->
 
-        <!-- Bahasa Inggris start -->
-        <section class="paket-section paket-english will-animate">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="section-title text-center mb-40">
-                            <h2 class="title">Bahasa Inggris</h2>
-                            <p class="lead">Kuasi speaking, grammar, dan vocabulary dengan latihan interaktif.</p>
+                <!-- Benefit Utama -->
+                <div class="row justify-content-center mb-30">
+                    <div class="col-lg-10">
+                        <div class="paket-card benefit-card will-animate" data-animate="fadeInUp" data-animate-delay="0.1s">
+                            <div class="title">Benefit Utama <br>(Berlaku untuk semua paket)</div>
+                            <ul class="desc">
+                                <li>
+                                    <i class="fas fa-check-circle"></i>
+                                    <div class="benefit-title"><b>Bank Latihan Soal (Latsol)</b></div>
+                                    <div class="benefit-text">Memperbanyak latihan untuk mematangkan pemahaman.</div>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check-circle"></i>
+                                    <div class="benefit-title"><b>Materi & Rangkuman Eksklusif</b></div>
+                                    <div class="benefit-text">Poin-poin penting pelajaran disajikan secara ringkas dan mudah dimengerti.</div>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check-circle"></i>
+                                    <div class="benefit-title"><b>Laporan Hasil Belajar</b></div>
+                                    <div class="benefit-text">Pantau terus perkembangan dan kemajuan belajar anak Anda secara berkala.</div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-                <div class="card-grid">
-                    <div class="paket-card will-animate" data-animate="fadeInLeft" data-animate-delay="0.1s">
-                        <div class="icon"><i class="fas fa-comments"></i></div>
-                        <div class="title">Speaking Practice</div>
-                        <div class="desc">Simulasi percakapan dan pronunciation yang natural.</div>
-                    </div>
-                    <div class="paket-card will-animate" data-animate="fadeInUp" data-animate-delay="0.2s">
-                        <div class="icon"><i class="fas fa-book"></i></div>
-                        <div class="title">Grammar Boost</div>
-                        <div class="desc">Rumus cepat, contoh jelas, dan latihan kontekstual.</div>
-                    </div>
-                    <div class="paket-card will-animate" data-animate="fadeInRight" data-animate-delay="0.3s">
-                        <div class="icon"><i class="fas fa-language"></i></div>
-                        <div class="title">Vocabulary Builder</div>
-                        <div class="desc">Kata-kata esensial, idiom, dan collocation yang sering dipakai.</div>
-                    </div>
-                </div>
-            </div>
-            <span class="shape" style="width:160px;height:160px;background:#8b5cf6;right:-40px;top:60px;"></span>
-            <span class="shape" style="width:120px;height:120px;background:#3b82f6;left:10%;bottom:60px;"></span>
-        </section>
-        <!-- Bahasa Inggris end -->
 
-        <!-- Matematika start -->
-        <section class="paket-section paket-math will-animate" >
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="section-title text-center mb-40">
-                            <h2 class="title">Matematika</h2>
-                            <p class="lead">Konsep jernih, trik cepat, dan latihan soal terarah.</p>
+                <!-- Paket Grid -->
+                <div class="card-grid pricing-grid">
+                    <!-- Paket Jago -->
+                    <div class="paket-card will-animate" data-animate="fadeInUp" data-animate-delay="0.15s">
+                        <div class="card-header">
+                            <div class="icon"><i class="fas fa-star"></i></div>
+                            <div class="title">Paket Jago</div>
+                        </div>
+                        <div class="card-body">
+                            <p class="desc">Pilihan ringkas untuk anak Anda yang ingin mencoba bimbingan belajar fokus.</p>
+                            <ul class="features">
+                                <li>4x pertemuan <br>(masing-masing 1 jam)</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <div class="price"><span>Rp 216.000</span></div>
+                            <a class="thm-btn" href="Kontak.html">Daftar Paket Jago</a>
                         </div>
                     </div>
-                </div>
-                <div class="card-grid">
-                    <div class="paket-card will-animate" data-animate="fadeInLeft" data-animate-delay="0.1s">
-                        <div class="icon"><i class="fas fa-calculator"></i></div>
-                        <div class="title">Aritmetika & Aljabar</div>
-                        <div class="desc">Pemahaman dasar kuat untuk menyelesaikan soal bervariasi.</div>
-                    </div>
-                    <div class="paket-card will-animate" data-animate="fadeInUp" data-animate-delay="0.2s">
-                        <div class="icon"><i class="fas fa-shapes"></i></div>
-                        <div class="title">Geometri & Trigonometri</div>
-                        <div class="desc">Visualisasi bentuk, sudut, dan relasi yang mudah dipahami.</div>
-                    </div>
-                    <div class="paket-card will-animate" data-animate="fadeInRight" data-animate-delay="0.3s">
-                        <div class="icon"><i class="fas fa-chart-line"></i></div>
-                        <div class="title">Statistika & Peluang</div>
-                        <div class="desc">Analisis data dan peluang kejadian dengan contoh nyata.</div>
-                    </div>
-                </div>
-            </div>
-            <span class="shape" style="width:160px;height:160px;background:#f59e0b;left:-50px;bottom:20px;"></span>
-            <span class="shape" style="width:120px;height:120px;background:#ef4444;right:12%;top:40px;"></span>
-        </section>
-        <!-- Matematika end -->
 
-        <!-- Bahasa Indonesia start -->
-        <section class="paket-section paket-bindo will-animate" >
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="section-title text-center mb-40">
-                            <h2 class="title">Bahasa Indonesia</h2>
-                            <p class="lead">Baca, tulis, dan kaidah bahasa yang rapi dan efektif.</p>
+                    <!-- Paket Unggul -->
+                    <div class="paket-card will-animate" data-animate="fadeInUp" data-animate-delay="0.25s">
+                        <div class="card-header">
+                            <div class="icon"><i class="fas fa-trophy"></i></div>
+                            <div class="title">Paket Unggul</div>
+                        </div>
+                        <div class="card-body">
+                            <p class="desc">Pilihan seimbang dengan durasi belajar lebih panjang untuk pendalaman materi yang lebih efektif.</p>
+                            <ul class="features">
+                                <li>8x pertemuan <br>(masing-masing 1,5 jam)</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <div class="price"><span>Rp 540.000</span></div>
+                            <a class="thm-btn" href="Kontak.html">Daftar Paket Unggul</a>
+                        </div>
+                    </div>
+
+                    <!-- Paket Juara (highlight) -->
+                    <div class="paket-card will-animate highlight" data-animate="fadeInUp" data-animate-delay="0.35s">
+                        <div class="card-header">
+                            <div class="icon"><i class="fas fa-crown"></i></div>
+                            <div class="title">Paket Juara</div>
+                        </div>
+                        <div class="card-body">
+                            <p class="desc">Paket terlengkap kami untuk bimbingan paling intensif dan hasil paling maksimal.</p>
+                            <ul class="features">
+                                <li>12x pertemuan <br>(masing-masing 1,5 jam)</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <div class="price"><span>Rp 778.000</span></div>
+                            <a class="thm-btn" href="Kontak.html">Daftar Paket Juara</a>
                         </div>
                     </div>
                 </div>
-                <div class="card-grid">
-                    <div class="paket-card will-animate" data-animate="fadeInLeft" data-animate-delay="0.1s">
-                        <div class="icon"><i class="fas fa-book-open"></i></div>
-                        <div class="title">Membaca & Memahami</div>
-                        <div class="desc">Teknik memahami teks, ide pokok, dan inferensi.</div>
-                    </div>
-                    <div class="paket-card will-animate" data-animate="fadeInUp" data-animate-delay="0.2s">
-                        <div class="icon"><i class="fas fa-pen-nib"></i></div>
-                        <div class="title">Menulis & Struktur</div>
-                        <div class="desc">Menyusun paragraf, tanda baca, dan pilihan kata yang tepat.</div>
-                    </div>
-                    <div class="paket-card will-animate" data-animate="fadeInRight" data-animate-delay="0.3s">
-                        <div class="icon"><i class="fas fa-feather-alt"></i></div>
-                        <div class="title">Gaya Bahasa</div>
-                        <div class="desc">Pemakaian majas, kalimat efektif, dan ragam tulisan.</div>
-                    </div>
-                </div>
             </div>
-            <span class="shape" style="width:160px;height:160px;background:#ec4899;right:-50px;bottom:60px;"></span>
-            <span class="shape" style="width:120px;height:120px;background:#f43f5e;left:8%;top:60px;"></span>
+            <span class="shape" style="width:160px;height:160px;background:#22d3ee;left:-40px;top:60px;"></span>
+            <span class="shape" style="width:120px;height:120px;background:#0ea5e9;right:10%;bottom:60px;"></span>
         </section>
-        <!-- Bahasa Indonesia end -->
+        <!-- Paket Belajar (New Layout) end -->
 
         </main>
 
