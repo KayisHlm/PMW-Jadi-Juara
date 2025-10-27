@@ -404,6 +404,21 @@
         <!-- Section 1: Sejarah Jadi Juara -->
         <section class="history-section section-notch will-animate" data-animate="fadeInUp" data-animate-delay="0.05s">
             <div class="container">
+                <style>
+                  /* Pertegas teks lead di bagian Sejarah agar tidak terlihat tipis */
+                  .history-section .history-content .lead{
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 1.7;
+                    color: rgba(0,0,0,0.88);
+                    letter-spacing: 0.1px;
+                    text-align: justify;
+                  }
+                  .history-section .history-content .lead b{
+                    font-weight: 800;
+                    color: var(--clr-deep-green, #1f4d32);
+                  }
+                </style>
                 <div class="row justify-content-center">
                     <div class="col-lg-10">
                         <div class="section-title text-center mb-50">
@@ -419,6 +434,19 @@
                        
                     </div>
                     <div class="history-content will-animate" data-animate="fadeInRight" data-animate-delay="0.15s">
+                        <style>
+                          /* Pertebal font paragraf lead agar lebih terlihat */
+                          .history-section .lead {
+                            font-weight: 700;
+                            color: rgba(0,0,0,0.86);
+                            font-size: 18px;
+                            line-height: 1.75;
+                            letter-spacing: 0.1px;
+                          }
+                          @media (min-width: 992px){
+                            .history-section .lead { font-size: 19px; }
+                          }
+                        </style>
                         <p class="lead"><b>Jadi Juara</b> didirikan pada tahun 2025 oleh empat mahasiswa Universitas Diponegoro. Ide bisnis ini berawal dari tugas mata kuliah kewirausahaan. Para pendiri melihat adanya peluang untuk membantu mahasiswa yang mengalami kesulitan finansial dengan cara mempertemukan mereka (yang memiliki ketertarikan mengajar paruh waktu) dengan orang tua siswa Sekolah Dasar yang mencari tutor les privat.</p>                        
                     </div>
                 </div>
