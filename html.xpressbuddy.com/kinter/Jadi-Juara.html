@@ -10,8 +10,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Jadi Juara</title>
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
-
+    <link rel="icon" type="image/jpeg" href="assets/img/image-asset/logo.jpeg">
+    <link rel="shortcut icon" type="image/jpeg" href="assets/img/image-asset/logo.jpeg">
+    <link rel="apple-touch-icon" href="assets/img/image-asset/logo.jpeg">
     <!-- css include -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/fontawesome.css">
@@ -108,6 +109,24 @@
 }
 .history-media .blob.blob-1{ left:-40px; top:-40px; }
 .history-media .blob.blob-2{ right:-35px; bottom:-35px; }
+
+/* Circular logo container: show full image without cropping */
+.history-media .circle-logo{
+  width: 400px; height: 400px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid rgba(2,6,23,.08);
+  box-shadow: 0 8px 20px rgba(2,6,23,.10);
+  display: grid; place-items: center;
+  margin: 0 auto;
+}
+.history-media .circle-logo img{
+  max-width: 80%; height: auto;
+  object-fit: cover; /* keep image intact */
+  border-radius: 40%;
+  box-shadow: none;
+  animation: none;
+}
 
 .history-content .lead{
   font-size:18px;
@@ -323,7 +342,7 @@
                     <div class="row align-items-center">
                         <div class="col-xl-2 col-lg-2 col-6">
                             <div class="logo">
-                                <a href="Home.html"><h1>Logo</h1></a>
+                                <a href="Home.html"><img src="assets/img/image-asset/logo.jpeg" style="height: 70px;" alt="logo"></a>
                             </div>
                         </div>
                         <div class="col-xl-7 col-lg-7 d-none d-lg-block">
@@ -362,7 +381,7 @@
 
         <main class="juara-page">
          <!-- page title start -->
-         <div class="page-title-area section-notch pt-170 pb-170" data-background="assets/img/bg/page-title-bg.jpg">
+         <div class="page-title-area section-notch pt-170 pb-170" data-background="assets/img/image-asset/img-5.jpg">
             <div class="banner-overlay"></div>
             <div class="container">
                 <div class="row">
@@ -394,12 +413,13 @@
                 </div>
                 <div class="history-wrap">
                     <div class="history-media will-animate" data-animate="fadeInLeft" data-animate-delay="0.1s">
-                        <img src="assets/img/slider/slide-01.jpg" alt="Sejarah Jadi Juara">
-                        <span class="blob blob-1"></span>
-                        <span class="blob blob-2"></span>
+                        <div class="circle-logo" aria-label="Logo Jadi Juara">
+                            <img src="assets/img/image-asset/logo.jpeg" alt="Sejarah Jadi Juara">
+                        </div>
+                       
                     </div>
                     <div class="history-content will-animate" data-animate="fadeInRight" data-animate-delay="0.15s">
-                        <p class="lead">Jadi Juara didirikan pada tahun 2025 oleh empat mahasiswa Universitas Diponegoro. Ide bisnis ini berawal dari tugas mata kuliah kewirausahaan. Para pendiri melihat adanya peluang untuk membantu mahasiswa yang mengalami kesulitan finansial dengan cara mempertemukan mereka (yang memiliki ketertarikan mengajar paruh waktu) dengan orang tua siswa Sekolah Dasar yang mencari tutor les privat.</p>                        
+                        <p class="lead"><b>Jadi Juara</b> didirikan pada tahun 2025 oleh empat mahasiswa Universitas Diponegoro. Ide bisnis ini berawal dari tugas mata kuliah kewirausahaan. Para pendiri melihat adanya peluang untuk membantu mahasiswa yang mengalami kesulitan finansial dengan cara mempertemukan mereka (yang memiliki ketertarikan mengajar paruh waktu) dengan orang tua siswa Sekolah Dasar yang mencari tutor les privat.</p>                        
                     </div>
                 </div>
             </div>
@@ -422,8 +442,7 @@
                              <span class="icon-badge"><i class="fas fa-bullseye"></i></span>
                              <span class="label">Visi</span>
                          </div>
-                        <h5 class="title">Menjadi platform bimbingan belajar yang paling berdampak.</h5>
-                        <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <h5 class="title">Menjadi platform bimbingan belajar yang berdampak untuk masyarakat</h5>
                         <span class="accent"></span>
                     </div>
                     <div class="purpose-card variant-orange will-animate" data-animate="fadeInUp" data-animate-delay="0.2s">
@@ -436,8 +455,8 @@
                             <li>Pembelajaran adaptif sesuai kebutuhan setiap siswa.</li>
                             <li>Pengukuran kemajuan yang terukur dan transparan.</li>
                             <li>Materi relevan dan praktis berbasis kurikulum.</li>
-                            <li>Pendampingan rutin oleh mentor berpengalaman.</li>
-                            <li>Peningkatan berkelanjutan berbasis data dan umpan balik.</li>
+                            <li>Pendampingan rutin oleh mentor.</li>
+                            <li>Meningkatkan rasa percaya diri dan capaian akademik siswa.</li>
                         </ul>
                         <span class="accent"></span>
                     </div>
@@ -547,16 +566,10 @@
                         <div class="row">
                             <div class="col-xl-4 col-lg-4 col-md-6">
                                 <div class="footer-widget mb-40">
-                                    <h3>About Kinter</h3>
-                                    <p>Monotne deplos copertve chanva andng crorate Qhanin Unique Qnderwhe Premum Convere With Uheng Mutmed Nquel Undehee Mandnge theme Qhann Unqu Qndewhe Premum Converenc With Aheing Mutmeda Nquel Undehele</p>
-                                    <div class="footer-social">
-                                        <h4>Follow us :</h4>
-                                        <a href="#!"><i class="fab fa-twitter"></i></a>
-                                        <a href="#!"><i class="fas fa-rss"></i></a>
-                                        <a href="#!"><i class="fab fa-dribbble"></i></a>
-                                        <a href="#!"><i class="fab fa-behance"></i></a>
-                                        <a href="#!"><i class="fab fa-instagram"></i></a>
-                                    </div>
+                                    <h3>About Jadi Juara</h3>
+                                    <p style="text-align: justify; line-height: 1.3;">Jadi Juara adalah bimbingan belajar online untuk siswa SD kelas 1-6 dengan fokus utama pada mata pelajaran Bahasa Indonesia, Bahasa Inggris, Matematika, dan IPAS. <br><br>
+Kami membantu anak belajar dengan cara yang menyenangkan, interaktif, dan sesuai kebutuhan mereka. Melalui pendekatan personal dan pemantauan rutin. Kami memastikan setiap anak dapat berkembang, percaya diri, dan menikmati proses belajar setiap hari.
+</p>
                                 </div>
                             </div>
                             <div class="col-xl-4 col-lg-4 col-md-6">
@@ -564,21 +577,20 @@
                                     <h3>Kontak Person</h3>
                                     <ul class="contact-list">
                                         <li><i class="fas fa-user"></i> Admin Jadi Juara</li>
-                                        <li><i class="fas fa-phone"></i> <a href="tel:+6281234567890">+62 812-3456-7890</a></li>
-                                        <li><i class="fas fa-envelope"></i> <a href="mailto:jadijuara@gmail.com">jadijuara@gmail.com</a></li>
-                                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/6281234567890" target="_blank" rel="noopener">WhatsApp: +62 812-3456-7890</a></li>
+                                        <li><i class="fas fa-phone"></i> <a href="https://wa.me/628567887669">+62 856-788-7669</a></li>
+                                        <li><i class="fas fa-envelope"></i> <a href="mailto:Jadijuarastudy@gmail.com">Jadijuarastudy@gmail.com</a></li>
+                                        <li><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/jadijuara_id/" target="_blank" rel="noopener noreferrer">@jadijuara_id</a></li>
+                                        <li><i class="fab fa-facebook"></i> <a href="https://www.facebook.com/share/19nhqr2nK5/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Jadi Juaraa Tembalang</a></li>
                                         <li><i class="fas fa-map-marker-alt"></i> Tembalang, Indonesia</li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-xl-4 col-lg-4 col-md-6">
                                 <div class="footer-widget mb-40">
-                                    <h3>Newsletter Subscription</h3>
-                                    <p>Enter your email and get latest updates and offers subscribe us</p>
-                                    <form action="#!">
-                                        <input type="text" placeholder="Enter your email">
-                                        <button class="thm-btn">Subscribe Now!</button>
-                                    </form>
+                                    <h3>Paket Belajar</h3>
+                                    <p>Tertarik dengan paket belajar kami? Daftar sekarang!</p>
+                                    <a class="thm-btn" href="Paket-Belajar.html">Daftar Paket Belajar</a>
+                                 
                                 </div>
                             </div>
                         </div>
